@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Star Rating | Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: #0d0d0d;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .rating-box {
+      background: #1c1c1c;
+      padding: 40px 30px;
+      border-radius: 15px;
+      text-align: center;
+      width: 320px;
+    }
+
+    .rating-box h1 {
+      color: #ffcc00;
+      margin-bottom: 25px;
+      font-size: 24px;
+    }
+
+    .stars {
+      direction: rtl;
+      unicode-bidi: bidi-override;
+      font-size: 45px;
+      display: inline-block;
+    }
+
+    .stars input {
+      display: none;
+    }
+
+    .stars label {
+      color: #555;
+      cursor: pointer;
+      transition: color 0.3s ease;
+    }
+
+    .stars input:checked ~ label,
+    .stars label:hover,
+    .stars label:hover ~ label {
+      color: #ffcc00;
+    }
+
+    .caption {
+      margin-top: 20px;
+      font-size: 14px;
+      color: #ccc;
+    }
+
+  .back-btn {
+  margin-top: 25px;
+  padding: 10px 25px;
+  background: transparent;
+  color: #ffcc00;
+  border: 2px solid #ffcc00;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s ease;
+}
+.back-btn a{
+  color: #ff6600;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.back-btn:hover {
+  background: #ffcc00;
+  color: #1c1c1c;
+}
+
+  </style>
+</head>
+<body>
+<div class="rating-box">
+  <h1>Rate My Portfolio</h1>
+  <div class="stars">
+    <input type="radio" id="star5" name="rating" value="5"><label for="star5">★</label>
+    <input type="radio" id="star4" name="rating" value="4"><label for="star4">★</label>
+    <input type="radio" id="star3" name="rating" value="3"><label for="star3">★</label>
+    <input type="radio" id="star2" name="rating" value="2"><label for="star2">★</label>
+    <input type="radio" id="star1" name="rating" value="1"><label for="star1">★</label>
+  </div>
+  <div class="caption">Click a star to rate!</div>
+
+  <!-- Back Button -->
+  <button class="back-btn"><a href="web2.html">← Back</a></button>
+</div>
+</body>
+</html>
